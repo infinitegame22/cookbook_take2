@@ -1,7 +1,7 @@
 require 'sinatra'
 
 def load_pictures
-  Dir.glob("public/slideshow_pictures/*.{jpg,JPG}")
+  Dir.glob("public/*.{jpg,JPG}")
 end
 
 get '/' do

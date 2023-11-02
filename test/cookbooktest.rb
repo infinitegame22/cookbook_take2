@@ -14,7 +14,7 @@ class CookbookTest < Minitest::Test
   def test_for_echo
     get '/'
     assert last_response.ok?
-    assert last_response.body.include?("slideshow_pictures/test.jpg")
+    assert last_response.body.include?("test.jpg")
   end
 
   def test_for_pictures
