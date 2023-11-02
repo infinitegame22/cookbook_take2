@@ -1,6 +1,7 @@
-require_relative "../main"
 require "minitest/autorun"
-#require "rack/test"
+require "rack/test"
+require_relative "../main"
+
 ENV['RACK_ENV'] = 'test'
 
 class CookbookTest < Minitest::Test
@@ -13,6 +14,11 @@ class CookbookTest < Minitest::Test
   def test_for_echo
     get '/'
     assert last_response.ok?
-    assert_equal 'Echo', last_response.body
+    assert last_response.body.include?("slideshow_pictures/empty.jpg")
+  end
+
+  def test_for_pictures
+    pictures = load_pictures
+    assert pictures.length > 0, "There are no pictures."
   end
 end
