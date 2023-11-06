@@ -9,4 +9,7 @@ get '/' do
   erb :index
 end
 
+post '/image' do
+  erb :upload
+end
 
