@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="fbf92f75-045b-4d41-9750-4b7b808c61a0" name="My Computer DBs">
+      <data-sources db="b6b4532f-6873-4dc7-8f71-2d982c705605" />
+      <scope>
+        <node kind="database">
+          <name qname="encyclopedia" />
+          <name qname="ls_burger" />
+          <name qname="sql_book" />
+          <node kind="schema" negative="1" />
+        </node>
+      </scope>
+    </mapping>
+    <mapping uuid="b16c0ff0-7239-4b47-8e03-7ee052e330df" name="Computers DB's Mapping">
+      <data-sources db="81a7ca87-1dcf-42c7-9215-10db0dad9a6e" ddl="58e6b593-6d0e-4d1f-bce3-6cdb6350b50b" />
+      <scope>
+        <node kind="database">
+          <name qname="encyclopedia" />
+          <name qname="ls_burger" />
+          <name qname="sql_book" />
+          <node kind="schema" negative="1" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+</project>

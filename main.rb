@@ -1,4 +1,10 @@
 require 'sinatra'
+require "sinatra/content_for"
+require "tilt/erubis"
+
+before do
+  #@storage = DatabasePersistence.new(logger)
+end
 
 # def load_pictures
 #   Dir.glob("public/*.{jpg,JPG}")
@@ -36,4 +42,17 @@ post "/create" do
 
     redirect "/"
   end
+end
+
+get '/login' do
+  "Hello World"
+  erb :login
+end
+
+get '/register' do
+  erb :register
+end
+
+post '/register' do
+  erb :register
 end
