@@ -14,5 +14,7 @@ CREATE TABLE recipes (
 
 CREATE TABLE ingredients (
   id INTEGER PRIMARY KEY,
-  
-)
+  title VARCHAR(255) NOT NULL,
+  content TEXT,
+  recipe_id INTEGER REFERENCES recipes(id)
+);
