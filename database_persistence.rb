@@ -1,7 +1,9 @@
 require "pg"
+require "bcrypt"
 
 class DatabasePersistence
-  def initialize(logger)
+  include BCrypt
+    def initialize(logger)
     @db = PG.connect(dbname: "cookbook")
     @logger = logger
   end
@@ -24,6 +26,12 @@ class DatabasePersistence
         last_name: row['last_name'],
         image_url: row['image_url']
       }
+    end
+
+    def create_user(username, password)
+      password_hash = BCrypt::Password.create(password)
+      sql = "INSERT INTO users (username, password_hash) VALUES ($1, $2)"
+      query(sql, username, password_hash)
     end
   end
 
