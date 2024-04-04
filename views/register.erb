@@ -8,8 +8,8 @@
 <body>
   <h2>User Registration</h2>
 
-  <% if flash[:error] %>
-    <p style="color: red;"><%= flash[:error] %></p>
+  <% if session[:error] %>
+    <p style="color: red;"><%= session[:error] %></p>
   <% end %>
 
   <form action="/register" method="post">

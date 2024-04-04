@@ -11,3 +11,8 @@ CREATE TABLE recipes (
   user_id INTEGER,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+CREATE TABLE ingredients (
+  id INTEGER PRIMARY KEY,
+  
+)
